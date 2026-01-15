@@ -1,0 +1,7 @@
+{
+    "name": "realestate/website",
+    "description": "Real estate website built with PHP and Tailwind CSS",
+    "type": "project",
+    "license": "MIT",
+    "require": {}
+}
