@@ -1,0 +1,12 @@
+{
+    "supabase": {
+        "url": "https://celwkzgkzmgtqbitnlzm.supabase.co",
+        "anon_key": "sb_publishable_eMUQmAVZht9jfD17WxWKXw_51kG8Yy2",
+        "storage_bucket": "blog-images"
+    },
+    "site": {
+        "logo_url": "https://kindreal-properties.com/images/logo.svg",
+        "whatsapp_number": "+2347032291977",
+        "site_name": "Kindreal Properties"
+    }
+}

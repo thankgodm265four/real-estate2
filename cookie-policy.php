@@ -8,23 +8,29 @@ include 'includes/header.php';
     <!-- Navigation Bar -->
     <nav class="flex items-center justify-between px-4 md:px-8 lg:px-24 py-4 md:py-6 relative z-50">
         <!-- Logo -->
-        <a href="index.php" class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight hover:opacity-90 transition relative z-50">
-            EverGreen
+        <a href="index.php" class="flex items-center gap-2 relative z-50 group">
+            <img src="https://kindreal-properties.com/images/logo.svg" alt="Kindreal Properties" class="h-8 md:h-10 w-auto">
+            <span class="text-xl font-bold text-gray-900 tracking-tight">Kindreal</span>
         </a>
         
         <!-- Desktop Menu -->
         <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
             <ul class="flex items-center gap-1 bg-gray-100/80 backdrop-blur-md border border-gray-200 rounded-full p-1.5">
                 <li><a href="index.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Home</a></li>
-                <li><a href="about.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">About</a></li>
-                <li><a href="projects.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Projects</a></li>
-                <li><a href="services.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Services</a></li>
+                <li><a href="blog.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Blog</a></li>
+                <li><a href="about.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Why Kindreal</a></li>
+                <li><a href="contact.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Contact Us</a></li>
             </ul>
         </div>
         
         <!-- Right Side -->
         <div class="flex items-center gap-3 md:gap-4 relative z-50">
-            <a href="buy-template.php" class="hidden md:inline-block bg-gray-900 text-white px-4 md:px-5 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition">Buy template</a>
+            <a href="tel:+2347032291977" class="hidden md:flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                <span class="text-sm font-medium">+234 703 229 1977</span>
+            </a>
             <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none relative z-50">
                 <span class="hamburger-line w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
                 <span class="hamburger-line w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
@@ -96,8 +102,8 @@ include 'includes/header.php';
                 <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Contact Us</h2>
                 <p>If you have any questions about our use of cookies, please contact us at:</p>
                 <p class="mt-4">
-                    Email: privacy@evergreen.com<br>
-                    Address:123 Design Avenue, Creative District, New York, NY 10001
+                    Email: privacy@kindreal-properties.com<br>
+                    Address: Plot 604, Along Katampe Road, Abuja, Nigeria.
                 </p>
             </section>
             

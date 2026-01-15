@@ -1,54 +1,81 @@
-# Real Estate Website
+# Kindreal Properties Blog
 
-A modern, responsive real estate website built with PHP and Tailwind CSS.
+Modern real estate blog with premium design and powerful CMS.
 
-## Features
-- **Responsive Design**: Mobile-first approach using Tailwind CSS.
-- **Dynamic Content**: PHP-based templating for easy content management.
-- **Interactive Elements**: 3D animations, sticky navigation, and smooth scrolling.
-- **Pages**:
-  - Home (Landing Page)
-  - About Us
-  - Projects
-  - Services
-  - Contact
-  - Blog
-  - Testimonials
+## 🚀 Deploy to Vercel
 
-## Development
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/realestate2)
 
-1. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
+## 🌟 Features
 
-2. **Run Development Server**:
-   ```bash
-   npm run dev
-   ```
-   This will watch for CSS changes and rebuild Tailwind.
+- **Premium Blog Design** - Dark, cinematic UI with glassmorphism
+- **Powerful CMS** - WordPress-like admin dashboard
+- **Supabase Backend** - Scalable database and storage
+- **Mobile Responsive** - Works perfectly on all devices
+- **Admin Authentication** - Secure session-based auth
+- **GSAP Animations** - Smooth, professional animations
 
-3. **Start PHP Server**:
-   ```bash
-   php -S localhost:8000
-   ```
+## 📋 Requirements
 
-## Deployment
+- PHP 8.2+
+- Supabase account (for database & storage)
+- Vercel account (for deployment)
 
-### Vercel
-This project is configured for deployment on Vercel using `vercel-php`.
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in the project directory.
+## 🛠️ Local Development
 
-### Docker
-1. Build the image:
-   ```bash
-   docker build -t realestate-website .
-   ```
-2. Run the container:
-   ```bash
-   docker run -p 8080:80 realestate-website
-   ```
+```bash
+# Start PHP server
+php -S localhost:8000
 
-### Standard Hosting
-Upload all files to your PHP-enabled web server (Apache/Nginx). Ensure `assets/css/output.css` is generated before uploading.
+# Visit
+http://localhost:8000
+```
+
+## 🔐 Admin Access
+
+**Login:** `http://localhost:8000/admin/login.php`
+
+**Default Credentials:**
+- Email: `admin@kindreal.com`
+- Password: `admin123`
+
+## 📁 Project Structure
+
+```
+realestate2/
+├── admin/              # Admin dashboard & CMS
+├── assets/             # CSS, JS, images
+├── config/             # Configuration files
+├── includes/           # Reusable components
+├── sections/           # Page sections
+├── index.php           # Homepage
+├── blog.php            # Blog page
+└── vercel.json         # Vercel config
+```
+
+## ⚙️ Configuration
+
+Edit `config/settings.json`:
+
+```json
+{
+  "supabase": {
+    "url": "YOUR_SUPABASE_URL",
+    "anon_key": "YOUR_SUPABASE_KEY",
+    "storage_bucket": "blog-images"
+  }
+}
+```
+
+## 📚 Documentation
+
+- [Vercel Deployment Guide](VERCEL_DEPLOYMENT.md)
+- Admin dashboard: `http://your-site.com/admin/`
+
+## 🤝 Support
+
+For issues or questions, contact Kindreal Properties.
+
+## 📄 License
+
+All rights reserved - Kindreal Properties

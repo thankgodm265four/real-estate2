@@ -15,8 +15,9 @@ include 'includes/header.php';
         <nav id="mainNav" class="fixed top-0 left-0 right-0 flex items-center justify-between px-4 md:px-8 lg:px-24 py-4 md:py-6 z-50 transition-all duration-300">
             
             <!-- Logo (Left) - Responsive sizing -->
-            <a href="#" class="text-xl md:text-2xl lg:text-3xl font-bold text-white tracking-tight hover:opacity-90 transition relative z-50">
-                EverGreen
+            <a href="index.php" class="flex items-center gap-2 relative z-50 group">
+                <img src="https://kindreal-properties.com/images/logo.svg" alt="Kindreal Properties" class="h-8 md:h-10 lg:h-12 w-auto filter brightness-0 invert">
+                <span class="hidden md:inline-block text-lg font-bold text-white tracking-tight">Kindreal</span>
             </a>
             
             <!-- Glassmorphism Menu (Center - Desktop Only) -->
@@ -28,48 +29,29 @@ include 'includes/header.php';
                             Home
                         </a>
                     </li>
-                    <!-- Other Links -->
+                    <!-- Blog -->
+                    <li>
+                        <a href="blog.php" class="text-white px-5 py-2 rounded-full hover:bg-white/10 transition-all duration-300 font-medium text-sm">
+                            Blog
+                        </a>
+                    </li>
+                    <!-- Why Kindreal -->
                     <li>
                         <a href="about.php" class="text-white px-5 py-2 rounded-full hover:bg-white/10 transition-all duration-300 font-medium text-sm">
-                            About
+                            Why Kindreal
                         </a>
                     </li>
+                    <!-- Contact Us -->
                     <li>
-                        <a href="projects.php" class="text-white px-5 py-2 rounded-full hover:bg-white/10 transition-all duration-300 font-medium text-sm">
-                            Projects
+                        <a href="contact.php" class="text-white px-5 py-2 rounded-full hover:bg-white/10 transition-all duration-300 font-medium text-sm">
+                            Contact Us
                         </a>
-                    </li>
-                    <li>
-                        <a href="services.php" class="text-white px-5 py-2 rounded-full hover:bg-white/10 transition-all duration-300 font-medium text-sm">
-                            Services
-                        </a>
-                    </li>
-                    <!-- Pages with Dropdown -->
-                    <li class="relative pages-dropdown">
-                        <button class="text-white px-5 py-2 rounded-full hover:bg-white/10 transition-all duration-300 font-medium text-sm flex items-center gap-1">
-                            Pages
-                            <svg class="w-3 h-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <!-- Dropdown Menu -->
-                        <div class="dropdown-menu absolute top-full mt-2 left-0 bg-white/95 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl overflow-hidden opacity-0 invisible transition-all duration-300 min-w-[200px]">
-                            <a href="home-v1.php" class="block px-6 py-3 text-gray-800 hover:bg-gray-100 transition text-sm">Home V1</a>
-                            <a href="blog.php" class="block px-6 py-3 text-gray-800 hover:bg-gray-100 transition text-sm">Blog V1</a>
-                            <a href="contact.php" class="block px-6 py-3 text-gray-800 hover:bg-gray-100 transition text-sm">Contact V1</a>
-                            <a href="services.php" class="block px-6 py-3 text-gray-800 hover:bg-gray-100 transition text-sm">Services</a>
-                        </div>
                     </li>
                 </ul>
             </div>
             
-            <!-- Right Side: Buy Template Button (Desktop) + Hamburger (Mobile) -->
+            <!-- Right Side: Hamburger (Mobile) -->
             <div class="flex items-center gap-3 md:gap-4 relative z-50">
-                <!-- Buy Template Button (Hidden on mobile) -->
-                <a href="buy-template.php" class="hidden md:inline-block bg-white text-gray-900 px-4 md:px-5 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition">
-                    Buy template
-                </a>
-                
                 <!-- Hamburger Menu Button (Mobile Only) -->
                 <button 
                     id="mobileMenuBtn" 
@@ -100,7 +82,10 @@ include 'includes/header.php';
                 
                 <!-- Header: Logo + Close Button -->
                 <div class="flex justify-between items-center p-6 md:p-8">
-                    <h1 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-tight">EverGreen</h1>
+                    <div class="flex items-center gap-2">
+                        <img src="https://kindreal-properties.com/images/logo.svg" alt="Kindreal Properties" class="h-8 w-auto">
+                        <span class="text-xl font-bold text-gray-900 tracking-tight">Kindreal</span>
+                    </div>
                     <button 
                         id="closeMobileMenu" 
                         class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors duration-300"
@@ -118,35 +103,15 @@ include 'includes/header.php';
                     <a href="index.php" class="text-lg md:text-xl font-normal text-gray-900 hover:translate-x-2 transition-transform duration-300">
                         Home
                     </a>
+                    <a href="blog.php" class="text-lg md:text-xl font-normal text-gray-900 hover:translate-x-2 transition-transform duration-300">
+                        Blog
+                    </a>
                     <a href="about.php" class="text-lg md:text-xl font-normal text-gray-900 hover:translate-x-2 transition-transform duration-300">
-                        About
+                        Why Kindreal
                     </a>
-                    <a href="projects.php" class="text-lg md:text-xl font-normal text-gray-900 hover:translate-x-2 transition-transform duration-300">
-                        Projects
+                    <a href="contact.php" class="text-lg md:text-xl font-normal text-gray-900 hover:translate-x-2 transition-transform duration-300">
+                        Contact Us
                     </a>
-                    <a href="services.php" class="text-lg md:text-xl font-normal text-gray-900 hover:translate-x-2 transition-transform duration-300">
-                        Services
-                    </a>
-                    
-                    <!-- Pages Dropdown -->
-                    <div class="mobile-pages-dropdown">
-                        <button class="w-full flex items-center justify-between text-lg md:text-xl font-normal text-gray-900 hover:translate-x-2 transition-transform duration-300">
-                            Pages
-                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-300">
-                            <div class="pl-6 pt-3 space-y-3">
-                                <a href="home-v1.php" class="block text-base text-gray-600 hover:text-gray-900 transition-colors duration-300">Home V1</a>
-                                <a href="blog.php" class="block text-base text-gray-600 hover:text-gray-900 transition-colors duration-300">Blog V1</a>
-                                <a href="contact.php" class="block text-base text-gray-600 hover:text-gray-900 transition-colors duration-300">Contact V1</a>
-                                <a href="testimonials.php" class="block text-base text-gray-600 hover:text-gray-900 transition-colors duration-300">Testimonials</a>
-                                <a href="about.php#team" class="block text-base text-gray-600 hover:text-gray-900 transition-colors duration-300">Core Team</a>
-                                <a href="index.php#faq" class="block text-base text-gray-600 hover:text-gray-900 transition-colors duration-300">FAQs</a>
-                            </div>
-                        </div>
-                    </div>
                 </nav>
                 
                 <!-- Profile Card (Bottom) -->
@@ -158,7 +123,7 @@ include 'includes/header.php';
                                 <!-- Avatar with Green Dot -->
                                 <div class="relative">
                                     <img 
-                                        src="https://ui-avatars.com/api/?name=EverGreen&background=4F46E5&color=fff&size=48" 
+                                        src="https://ui-avatars.com/api/?name=Kindreal+Properties&background=000&color=fff&size=48" 
                                         alt="Profile" 
                                         class="w-12 h-12 rounded-full object-cover"
                                     >
@@ -166,13 +131,13 @@ include 'includes/header.php';
                                 </div>
                                 <!-- Name + Title -->
                                 <div class="flex flex-col">
-                                    <p class="text-white font-bold text-sm">EverGreen Team</p>
-                                    <p class="text-gray-400 text-xs">Design Experts</p>
+                                    <p class="text-white font-bold text-sm">Kindreal Properties</p>
+                                    <p class="text-gray-400 text-xs">Nigeria's No.1</p>
                                 </div>
                             </div>
                             <!-- CTA Button -->
                             <a 
-                                href="#" 
+                                href="contact.php" 
                                 class="bg-white text-black px-4 md:px-5 py-2 rounded-full font-medium text-sm hover:bg-gray-100 transition-all duration-300 hover:shadow-lg whitespace-nowrap"
                             >
                                 Book a call
@@ -370,12 +335,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             <!-- Main Heading - Large Bold White -->
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight mb-6">
-                We are experts<br>elevating lives
+                We offer homes that<br>inspire greatness
             </h1>
             
             <!-- Subtitle - Smaller Light Gray -->
             <p class="text-sm md:text-base text-white/80 max-w-xl mb-8 leading-relaxed">
-                Elevate your interior design projects with a sleek, customizable template built to showcase your creative vision. Perfect for designers who want to captivate clients.
+                Modern architecture, exclusive locations, and comfortable homes designed to inspire you and your family. Nigeria's No.1 real estate company.
             </p>
             
             <!-- Primary CTA Button - White Pill -->
@@ -429,8 +394,8 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ========== PROJECTS SECTION ========== -->
 <?php include 'sections/projects-section.php'; ?>
 
-<!-- ========== EVENTS SECTION ========== -->
-<?php include 'sections/events-section.php'; ?>
+<!-- ========== BLOG SECTION ========== -->
+<?php include 'sections/blog-section.php'; ?>
 
 <!-- ========== FAQ SECTION ========== -->
 <?php include 'sections/faq-section.php'; ?>

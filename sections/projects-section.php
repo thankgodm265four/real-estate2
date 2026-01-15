@@ -6,24 +6,28 @@
 
 $projects = [
     [
-        'title' => 'Modern Office Design',
-        'image' => 'assets/images/project-office.jpg',
-        'link' => '#'
+        'title' => 'Shelter Gold Estates',
+        'location' => 'Apo, Abuja',
+        'image' => 'https://kindreal-properties.com/images/banner/banner-property-6.jpg',
+        'link' => 'projects.php'
     ],
     [
-        'title' => 'Modern Loft Design',
-        'image' => 'assets/images/project-loft.jpg',
-        'link' => '#'
+        'title' => 'Apo Gude Golden City',
+        'location' => 'Apo, Abuja',
+        'image' => 'https://kindreal-properties.com/images/banner/img-w-text2.jpg',
+        'link' => 'projects.php'
     ],
     [
-        'title' => 'Modern Kitchen Design',
-        'image' => 'assets/images/project-kitchen.jpg',
-        'link' => '#'
+        'title' => 'Peace Crest Estate',
+        'location' => 'Sheritti, Abuja',
+        'image' => 'https://kindreal-properties.com/images/banner/item1.jpg',
+        'link' => 'projects.php'
     ],
     [
-        'title' => 'Modern Workspace Design',
-        'image' => 'assets/images/project-workspace.jpg',
-        'link' => '#'
+        'title' => 'Strategic FCT Locations',
+        'location' => 'Abuja, Nigeria',
+        'image' => 'https://kindreal-properties.com/images/banner/item2.jpg',
+        'link' => 'projects.php'
     ]
 ];
 ?>
@@ -37,7 +41,7 @@ $projects = [
             <!-- Left: Headline -->
             <div data-reveal="fade-right">
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
-                    Expert guidance and solutions for your project stages
+                    Exceptional spaces that inspire and endure
                 </h2>
             </div>
             
@@ -54,12 +58,12 @@ $projects = [
                     
                     <!-- Description -->
                     <p class="text-base md:text-lg text-white/80 leading-relaxed mb-8">
-                        Discover our featured works showcasing our expertise and passion in every project. Let <span class="text-white font-medium">these stories</span> inspire your next venture!
+                        Explore our diverse portfolio of residential and commercial developments. We create <span class="text-white font-medium">lasting value</span> for our clients and communities.
                     </p>
                     
                     <!-- Learn More Button -->
-                    <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-md text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        Learn More
+                    <a href="projects.php" class="inline-block bg-white text-black px-8 py-3 rounded-md text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        View All Projects
                     </a>
                 </div>
             </div>

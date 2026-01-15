@@ -14,9 +14,12 @@
             
             <!-- Column 1: Brand & Description -->
             <div class="space-y-6" data-reveal="fade-up">
-                <h3 class="text-3xl font-bold">EverGreen</h3>
+                <div class="flex items-center gap-2">
+                    <img src="https://kindreal-properties.com/images/logo.svg" alt="Kindreal Properties" class="h-8 w-auto filter brightness-0 invert">
+                    <span class="text-xl font-bold text-white tracking-tight">Kindreal</span>
+                </div>
                 <p class="text-white/60 text-sm leading-relaxed">
-                    Transforming spaces into extraordinary experiences. We specialize in creating sustainable, innovative designs that elevate your lifestyle.
+                    Nigeria's No.1 real estate company. We offer homes that inspire greatness. Transforming the way people live, work, and invest.
                 </p>
                 
                 <!-- Social Media Links -->
@@ -88,31 +91,31 @@
                     <li>
                         <a href="services.php" class="text-white/60 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
                             <span class="w-0 h-px bg-white transition-all duration-300 group-hover:w-4"></span>
-                            Interior Design
+                            Buy A New Home
                         </a>
                     </li>
                     <li>
                         <a href="services.php" class="text-white/60 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
                             <span class="w-0 h-px bg-white transition-all duration-300 group-hover:w-4"></span>
-                            Architecture
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contact.php" class="text-white/60 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
-                            <span class="w-0 h-px bg-white transition-all duration-300 group-hover:w-4"></span>
-                            Consultation
+                            Rent a Home
                         </a>
                     </li>
                     <li>
                         <a href="services.php" class="text-white/60 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
                             <span class="w-0 h-px bg-white transition-all duration-300 group-hover:w-4"></span>
-                            Project Management
+                            Sell a Home
                         </a>
                     </li>
                     <li>
                         <a href="services.php" class="text-white/60 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
                             <span class="w-0 h-px bg-white transition-all duration-300 group-hover:w-4"></span>
-                            3D Visualization
+                            Property Management
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.php" class="text-white/60 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
+                            <span class="w-0 h-px bg-white transition-all duration-300 group-hover:w-4"></span>
+                            Real Estate Investment
                         </a>
                     </li>
                 </ul>
@@ -145,17 +148,17 @@
                 
                 <!-- Contact Info -->
                 <div class="pt-4 space-y-2">
-                    <a href="mailto:info@evergreen.com" class="text-white/60 hover:text-white text-sm flex items-center gap-2 transition-colors duration-300">
+                    <a href="mailto:hi@kindreal-properties.com" class="text-white/60 hover:text-white text-sm flex items-center gap-2 transition-colors duration-300">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
-                        info@evergreen.com
+                        hi@kindreal-properties.com
                     </a>
-                    <a href="tel:+1234567890" class="text-white/60 hover:text-white text-sm flex items-center gap-2 transition-colors duration-300">
+                    <a href="tel:+2347032291977" class="text-white/60 hover:text-white text-sm flex items-center gap-2 transition-colors duration-300">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
-                        +1 (234) 567-890
+                        +234 703 229 1977
                     </a>
                 </div>
             </div>
@@ -169,7 +172,7 @@
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <!-- Copyright -->
             <p class="text-white/40 text-sm">
-                © <?php echo date('Y'); ?> EverGreen. All rights reserved.
+                © <?php echo date('Y'); ?> Kindreal Properties. All rights reserved.
             </p>
             
             <!-- Legal Links -->
@@ -238,6 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+
+<?php include __DIR__ . '/whatsapp-chat.php'; ?>
 
 </body>
 </html>

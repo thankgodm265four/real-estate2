@@ -26,10 +26,10 @@
             <!-- Right: Headline with Tagline -->
             <div class="lg:col-span-9 space-y-4" data-reveal="fade-left" data-reveal-delay="200">
                 <h3 class="text-4xl md:text-5xl lg:text-6xl font-light text-black leading-tight">
-                    Design with<br>purpose. style<br>with heart.
+                    Homes that<br>inspire greatness.
                 </h3>
                 <p class="text-sm md:text-base text-gray-500 max-w-md">
-                    Let's create a space that's not just<br>beautiful—but beautifully yours.
+                    Nigeria's No.1 real estate company<br>servicing clients across Africa.
                 </p>
             </div>
             
@@ -48,21 +48,21 @@
                     <!-- Left Column: Text + Image -->
                     <div class="space-y-6" data-reveal="fade-up" data-reveal-delay="0">
                         <p class="text-sm md:text-base text-gray-700 leading-relaxed">
-                            At Luzen, we believe that great design goes beyond aesthetics—it should tell your story, support your lifestyle, and inspire daily living.
+                            Welcome to Kindreal Properties. Here, we turn houses into homes and dreams into reality. We perfectly understand that your home is more than just a physical space, it's a place where memories are created.
                         </p>
                         
                         <!-- Image 1 -->
                         <div class="relative rounded-lg overflow-hidden group" data-tilt data-tilt-max="3">
                             <div class="aspect-[4/5] bg-gradient-to-br from-gray-200 to-gray-300">
                                 <img 
-                                    src="assets/images/interior-1.jpg" 
-                                    alt="Minimalist workspace with natural light" 
+                                    src="https://kindreal-properties.com/images/banner/item1.jpg" 
+                                    alt="Kindreal Properties Interior" 
                                     class="w-full h-full object-cover opacity-0"
                                     onerror="this.style.opacity=0"
                                     onload="this.style.opacity=1"
                                 >
                             </div>
-                            <div class="absolute bottom-4 left-4 text-xs text-white/80">Luzen's 001</div>
+                            <div class="absolute bottom-4 left-4 text-xs text-white/80">Kindreal's 001</div>
                         </div>
                     </div>
                     
@@ -72,8 +72,8 @@
                         <div class="relative rounded-lg overflow-hidden group" data-tilt data-tilt-max="3">
                             <div class="aspect-[4/3] bg-gradient-to-br from-gray-300 to-gray-400">
                                 <img 
-                                    src="assets/images/interior-2.jpg" 
-                                    alt="Modern kitchen interior design" 
+                                    src="https://kindreal-properties.com/images/banner/item2.jpg" 
+                                    alt="Kindreal Properties Interior" 
                                     class="w-full h-full object-cover opacity-0"
                                     onerror="this.style.opacity=0"
                                     onload="this.style.opacity=1"
@@ -82,7 +82,7 @@
                         </div>
                         
                         <p class="text-sm md:text-base text-gray-700 leading-relaxed">
-                            With years of experience in residential and commercial interior, our team blends creativity with function to craft spaces that feel as good as they look. From initial concepts to the final styling touches, we're with you every step of the way.
+                            We aim to provide high quality, sustainable, and innovative real estate solutions that enhance communities and create lasting value for our client, investors, and stakeholders. We are committed to integrity, excellence and customer satisfaction.
                         </p>
                     </div>
                     

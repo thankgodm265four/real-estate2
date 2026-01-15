@@ -2,19 +2,53 @@
 include 'includes/header.php';
 ?>
 
-<!-- Testimonials Hero Section --><section class="relative w-full min-h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
+<!-- Testimonials Page -->
+<section class="relative w-full min-h-screen bg-white">
     
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-black/30"></div>
-    
-    <!-- Hero Content -->
-    <div class="relative z-10 text-center px-6 max-w-4xl">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-            Client Testimonials
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-300 mb-8">
-            Hear what our clients say about their experience with us
-        </p>
+    <!-- Navigation Bar -->
+    <nav class="flex items-center justify-between px-4 md:px-8 lg:px-24 py-4 md:py-6 relative z-50">
+        <!-- Logo -->
+        <a href="index.php" class="flex items-center gap-2 relative z-50 group">
+            <img src="https://kindreal-properties.com/images/logo.svg" alt="Kindreal Properties" class="h-8 md:h-10 w-auto">
+            <span class="text-xl font-bold text-gray-900 tracking-tight">Kindreal</span>
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
+            <ul class="flex items-center gap-1 bg-gray-100/80 backdrop-blur-md border border-gray-200 rounded-full p-1.5">
+                <li><a href="index.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Home</a></li>
+                <li><a href="blog.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Blog</a></li>
+                <li><a href="about.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Why Kindreal</a></li>
+                <li><a href="contact.php" class="text-gray-700 px-5 py-2 rounded-full hover:bg-white transition-all duration-300 font-medium text-sm">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Right Side -->
+        <div class="flex items-center gap-3 md:gap-4 relative z-50">
+            <a href="tel:+2347032291977" class="hidden md:flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                <span class="text-sm font-medium">+234 703 229 1977</span>
+            </a>
+            <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none relative z-50">
+                <span class="hamburger-line w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Testimonials Hero Section -->
+    <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-20">
+        <div class="text-center space-y-8" data-reveal="fade-up">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-gray-900">
+                Client Testimonials
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                Hear what our clients say about their experience with Kindreal Properties. Real stories from people who trusted us with their dreams.
+            </p>
+        </div>
     </div>
 </section>
 
@@ -45,7 +79,7 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    "EverGreen transformed our outdated property into a modern masterpiece. Their attention to detail and commitment to excellence exceeded all our expectations."
+                    "Kindreal transformed our outdated property into a modern masterpiece. Their attention to detail and commitment to excellence exceeded all our expectations."
                 </p>
                 <div class="flex items-center">
                     <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>

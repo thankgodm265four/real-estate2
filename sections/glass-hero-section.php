@@ -32,8 +32,8 @@
                     </h2>
                     
                     <!-- CTA Button -->
-                    <a href="#" class="inline-block bg-white text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 font-medium text-sm">
-                        See Explore Our Services
+                    <a href="projects.php" class="inline-block bg-white text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 font-medium text-sm">
+                        Explore Our Projects
                     </a>
                 </div>
             </div>
@@ -49,11 +49,11 @@
                     <!-- Headline -->
                     <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-8">
                         Let's begin<br>
-                        in the experience
+                        the experience
                     </h2>
                     
                     <!-- CTA Button -->
-                    <a href="#" class="inline-block bg-white text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 font-medium text-sm">
+                    <a href="contact.php" class="inline-block bg-white text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 font-medium text-sm">
                         Get in touch
                     </a>
                 </div>
