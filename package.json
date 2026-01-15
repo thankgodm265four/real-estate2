@@ -1,0 +1,17 @@
+{
+  "name": "realestate-website",
+  "version": "1.0.0",
+  "description": "Real estate website built with PHP and Tailwind CSS",
+  "main": "index.php",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify"
+  },
+  "keywords": ["php", "tailwind", "css"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.32"
+  }
+}

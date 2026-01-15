@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tilt Card - Premium Effect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        /* Perspective container */
+        .tilt-container {
+            perspective: 1000px;
+        }
+        
+        /* Card with 3D transforms */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
+        
+        /* Smooth reset transition */
+        .tilt-card.resetting {
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        /* Glare overlay */
+        .glare-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                circle at 50% 50%,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.1) 30%,
+                transparent 60%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+        }
+        
+        .tilt-card:hover .glare-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-8">
+    
+    <!-- 3D Tilt Card Container -->
+    <div class="tilt-container">
+        <div class="tilt-card relative w-80 h-96 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-2xl shadow-2xl overflow-hidden cursor-pointer">
+            
+            <!-- Card Content (with 3D depth) -->
+            <div class="relative h-full p-6 flex flex-col justify-between" style="transform: translateZ(20px);">
+                
+                <!-- Image Section -->
+                <div class="flex-1 flex items-center justify-center">
+                    <div class="w-32 h-32 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Text Section -->
+                <div class="text-white">
+                    <h3 class="text-2xl font-bold mb-2">Premium Card</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Hover over this card to experience the smooth 3D tilt effect with dynamic lighting.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="flex gap-4 mt-4">
+                        <div>
+                            <div class="text-2xl font-bold">99%</div>
+                            <div class="text-xs text-white/60">Success</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">24/7</div>
+                            <div class="text-xs text-white/60">Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dynamic Glare Overlay -->
+            <div class="glare-overlay"></div>
+            
+            <!-- Shine Effect Layer -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 pointer-events-none"></div>
+        </div>
+    </div>
+    
+    <!-- Additional Demo Cards -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+        <p class="text-white/60 text-sm">Move your mouse over the card</p>
+    </div>
+
+    <script>
+        /**
+         * 3D Tilt Card Effect
+         * Senior Frontend Developer Implementation
+         */
+        
+        class TiltCard {
+            constructor(cardElement) {
+                this.card = cardElement;
+                this.glare = cardElement.querySelector('.glare-overlay');
+                this.maxTilt = 15; // Maximum tilt angle in degrees
+                this.perspective = 1000; // Perspective value
+                
+                this.init();
+            }
+            
+            init() {
+                // Bind event listeners
+                this.card.addEventListener('mousemove', this.handleMouseMove.bind(this));
+                this.card.addEventListener('mouseleave', this.handleMouseLeave.bind(this));
+                this.card.addEventListener('mouseenter', this.handleMouseEnter.bind(this));
+            }
+            
+            handleMouseMove(e) {
+                // Get card dimensions and position
+                const rect = this.card.getBoundingClientRect();
+                const cardWidth = rect.width;
+                const cardHeight = rect.height;
+                
+                // Calculate mouse position relative to card center
+                const mouseX = e.clientX - rect.left; // X position within the card
+                const mouseY = e.clientY - rect.top;  // Y position within the card
+                
+                // Calculate center point
+                const centerX = cardWidth / 2;
+                const centerY = cardHeight / 2;
+                
+                // Calculate rotation angles
+                // rotateY: horizontal mouse movement (left/right tilt)
+                // rotateX: vertical mouse movement (up/down tilt)
+                const rotateY = ((mouseX - centerX) / centerX) * this.maxTilt;
+                const rotateX = ((centerY - mouseY) / centerY) * this.maxTilt;
+                
+                // Apply 3D transform
+                this.card.style.transform = `
+                    perspective(${this.perspective}px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    scale3d(1.02, 1.02, 1.02)
+                `;
+                
+                // Update glare position
+                this.updateGlare(mouseX, mouseY, cardWidth, cardHeight);
+            }
+            
+            updateGlare(mouseX, mouseY, cardWidth, cardHeight) {
+                // Calculate percentage position
+                const percentX = (mouseX / cardWidth) * 100;
+                const percentY = (mouseY / cardHeight) * 100;
+                
+                // Update glare gradient position
+                this.glare.style.background = `
+                    radial-gradient(
+                        circle at ${percentX}% ${percentY}%,
+                        rgba(255, 255, 255, 0.4) 0%,
+                        rgba(255, 255, 255, 0.2) 20%,
+                        rgba(255, 255, 255, 0.1) 40%,
+                        transparent 70%
+                    )
+                `;
+            }
+            
+            handleMouseEnter() {
+                // Remove resetting class for instant response
+                this.card.classList.remove('resetting');
+            }
+            
+            handleMouseLeave() {
+                // Add resetting class for smooth transition
+                this.card.classList.add('resetting');
+                
+                // Reset transform to original state
+                this.card.style.transform = `
+                    perspective(${this.perspective}px)
+                    rotateX(0deg)
+                    rotateY(0deg)
+                    scale3d(1, 1, 1)
+                `;
+                
+                // Reset glare to center
+                this.glare.style.background = `
+                    radial-gradient(
+                        circle at 50% 50%,
+                        rgba(255, 255, 255, 0.3) 0%,
+                        rgba(255, 255, 255, 0.1) 30%,
+                        transparent 60%
+                    )
+                `;
+                
+                // Remove resetting class after transition
+                setTimeout(() => {
+                    this.card.classList.remove('resetting');
+                }, 500);
+            }
+        }
+        
+        // Initialize all tilt cards on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.tilt-card');
+            cards.forEach(card => new TiltCard(card));
+            
+            console.log('✨ 3D Tilt Cards initialized!');
+        });
+    </script>
+
+</body>
+</html>
